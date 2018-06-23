@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="RadioTheme01" parent="">
+        <item name="android:background">@drawable/radio_selector01</item>
+    </style>
+    <style name="RadioTheme02" parent="">
+        <item name="android:background">@drawable/radio_selector02</item>
+    </style>
+    <style name="RadioTheme03" parent="">
+        <item name="android:background">@drawable/radio_selector03</item>
+    </style>
+    <style name="RadioTheme04" parent="">
+        <item name="android:background">@drawable/radio_selector04</item>
+    </style>
+    <style name="RadioTheme05" parent="">
+        <item name="android:background">@drawable/radio_selector05</item>
+    </style>
+</resources>

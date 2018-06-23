@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test2">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".application.MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/jd_shop_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.activity.StartPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".view.activity.ProductListActivity" />
+        <activity android:name=".view.activity.ProductDetailsActivity" />
+        <activity android:name=".view.activity.LoginActivity" />
+        <activity android:name=".view.activity.RegisterActivity" />
+        <activity android:name=".view.activity.GuidePageActivity" />
+        <activity android:name=".view.activity.SearchActivity" />
+        <activity android:name=".view.activity.SettingActivity" />
+        <activity android:name=".view.activity.WeChatCaptureActivity" />
+        <activity android:name=".view.activity.OrdersActivity" />
+        <activity android:name=".view.activity.AddrsActivity"></activity>
+    </application>
+
+</manifest>

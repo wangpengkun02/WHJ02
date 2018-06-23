@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.whj02.activity.ZcActivity">
+    <EditText
+        android:id="@+id/zcname"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入手机号" />
+
+    <EditText
+        android:id="@+id/zcpwd"
+        android:layout_below="@id/zcname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入密码" />
+
+    <Button
+        android:id="@+id/ljzc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/zcpwd"
+         android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="立即注册" />
+
+
+</RelativeLayout>

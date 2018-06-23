@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <CheckBox
+        android:layout_width="50dp"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:id="@+id/spche_box"
+        android:layout_marginLeft="20dp"
+android:layout_marginTop="35dp"
+        android:layout_height="50dp" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="120dp"
+        android:layout_toRightOf="@id/spche_box"
+
+        android:id="@+id/spimg"
+        android:background="@mipmap/ic_launcher"
+        android:layout_height="120dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/spname"
+        android:text="asdggsds"
+        android:layout_toRightOf="@id/spimg"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/spprice"
+        android:text="￥95.00"
+        android:layout_below="@id/spname"
+        android:layout_toRightOf="@id/spimg"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/spsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/jian"
+        android:layout_toLeftOf="@+id/jian"
+        android:layout_toStartOf="@+id/jian"
+        android:src="@drawable/delete" />
+
+       <TextView
+           android:id="@+id/jian"
+           android:layout_width="20dp"
+           android:layout_height="50dp"
+           android:textStyle="bold"
+           android:textColor="#ff0000"
+android:textSize="23sp"
+           android:layout_alignBottom="@id/spimg"
+           android:layout_toLeftOf="@id/spnum"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:text="-" />
+       <EditText
+                  android:layout_width="30dp"
+                  android:id="@+id/spnum"
+           android:gravity="center"
+           android:textSize="16sp"
+           android:layout_alignBottom="@id/spimg"
+   android:layout_toLeftOf="@id/jia"
+           android:layout_gravity="center"
+           android:layout_height="50dp" />
+       <TextView
+           android:layout_width="20dp"
+           android:id="@+id/jia"
+           android:text="+"
+
+           android:textSize="23sp"
+           android:gravity="center"
+           android:textStyle="bold"
+           android:layout_alignBottom="@id/spimg"
+           android:layout_alignParentRight="true"
+              android:textColor="#ff0000"
+           android:layout_gravity="center"
+           android:layout_height="50dp" />
+
+</RelativeLayout>

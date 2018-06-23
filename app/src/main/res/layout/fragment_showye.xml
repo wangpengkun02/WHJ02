@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.whj02.fragment.ShowyeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <TextView
+           android:drawableTop="@drawable/sao_kind"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/sys"
+            android:text="扫一扫"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:focusable="false"
+            android:id="@+id/ssk"
+            android:focusableInTouchMode="false"
+            android:layout_height="match_parent" />
+        <TextView
+            android:drawableTop="@drawable/order_find"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="搜索"
+            android:id="@+id/ss"
+             android:gravity="center"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="9"
+        android:layout_height="0dp">
+       <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <com.youth.banner.Banner
+           android:layout_centerHorizontal="true"
+           android:layout_width="match_parent"
+           android:layout_height="150dp"
+           android:id="@+id/mybanner">
+       </com.youth.banner.Banner>
+       <LinearLayout
+           android:layout_below="@id/mybanner"
+           android:id="@+id/ll01"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:id="@+id/rlv"
+               android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_below="@id/ll01"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:id="@+id/rlv02"
+               android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+       </LinearLayout>
+
+   </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.whj02.activity.SouSuoHou">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:focusableInTouchMode="false"
+            android:id="@+id/dlgssk"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/dlgimg"
+            android:src="@drawable/kind_liner"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+   <!-- <ScrollView
+        android:layout_weight="9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">-->
+        <RelativeLayout
+            android:layout_weight="9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/ssrlv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.jcodecraeer.xrecyclerview.XRecyclerView>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floating_btn_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/up"
+                app:elevation="10dp"
+                android:layout_margin="15dp"/>
+        </RelativeLayout>
+    <!--</ScrollView>-->
+</LinearLayout>

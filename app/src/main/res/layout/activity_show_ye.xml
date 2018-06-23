@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.whj02.activity.ShowYeActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:id="@+id/fl"
+        >
+    </FrameLayout>
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/fl"
+
+            android:layout_weight="1">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/shouye"
+                      android:checked="true"
+                style="@style/RadioTheme01"
+                android:button="@null"
+                android:layout_height="match_parent" />
+            <RadioButton
+                android:id="@+id/fenlei"
+                style="@style/RadioTheme02"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:button="@null"
+                android:layout_height="match_parent" />
+            <RadioButton
+                style="@style/RadioTheme03"
+
+                android:id="@+id/faxian"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+
+                android:button="@null"
+                android:layout_height="match_parent" />
+            <RadioButton
+                style="@style/RadioTheme04"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/gouwuche"
+
+                android:button="@null"
+                android:layout_height="match_parent" />
+            <RadioButton
+                style="@style/RadioTheme05"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/wode"
+
+                android:button="@null"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/normal_regbg"/>
+        <LinearLayout
+            android:id="@+id/ll_mine_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_mine_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:placeholderImage="@drawable/user"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_mine_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#fff"
+                android:text="登录/注册"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/my_set_hei"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_mine_logoff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFB6C1"
+        android:text="注销" />
+    <Button
+        android:id="@+id/btn_mine_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFB6C1"
+        android:text="修改昵称" />
+    <Button
+        android:id="@+id/btn_mine_pictures"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFB6C1"
+        android:text="上传头像" />
+    <Button
+        android:id="@+id/btn_mine_addrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFB6C1"
+        android:text="收货地址列表" />
+    <Button
+        android:id="@+id/btn_mine_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#FFB6C1"
+        android:text="订单列表" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

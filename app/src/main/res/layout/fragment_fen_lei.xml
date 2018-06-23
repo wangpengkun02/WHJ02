@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.whj02.fragment.GouWuCheFragment">
+
+
+<RelativeLayout
+    android:layout_width="0dp"
+    android:layout_weight="3"
+     android:layout_height="match_parent">
+<android.support.v7.widget.RecyclerView
+    android:layout_width="200dp"
+     android:id="@+id/leftfen"
+    android:layout_centerHorizontal="true"
+    android:layout_height="match_parent">
+</android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="600dp"
+            android:id="@+id/rightfen"
+
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+
+</LinearLayout>

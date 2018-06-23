@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.whj02.activity.DlActivity">
+
+    <EditText
+        android:id="@+id/dlname"
+        android:layout_marginTop="200dp"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入手机号" />
+
+    <EditText
+        android:id="@+id/dlpwd"
+        android:layout_below="@id/dlname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入密码" />
+
+    <Button
+        android:id="@+id/diandl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dlpwd"
+
+        android:text="登录" />
+
+    <Button
+        android:id="@+id/dianzc"
+        android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/diandl"
+        android:text="注册" />
+
+</RelativeLayout>
