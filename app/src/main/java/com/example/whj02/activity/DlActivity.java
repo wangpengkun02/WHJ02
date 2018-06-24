@@ -113,7 +113,7 @@ String Pathdl="https://www.zhaoapi.cn/user/login?";
                                    edit = text.edit();
                                    edit.putBoolean("pd",true);
                                        edit.putString("name1", dlBean.getData().getUsername());
-
+                                   edit.putString("token", dlBean.getData().getToken());
                                    edit.putInt("uid",dlBean.getData().getUid());
                                        edit.commit();
                                        finish();

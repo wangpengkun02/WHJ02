@@ -149,7 +149,7 @@ public class sousuo extends AppCompatActivity {
 
 
 //           //保存按下能显示selector的效果，需要设置一个如下的属性
-            // textView.setBackground(DrawUtils.getSelector(DrawUtils.getDrawable(MainActivity.this, Color.rgb(210, 210, 210), DensityUtil.dip2px(this, 4)), DrawUtils.getDrawable(MainActivity.this, Color.WHITE, DensityUtil.dip2px(this, 4))));
+            // textView.setBackground(DrawUtils.getSelector(DrawUtils.getDrawable(BaiDuDITuActivity.this, Color.rgb(210, 210, 210), DensityUtil.dip2px(this, 4)), DrawUtils.getDrawable(BaiDuDITuActivity.this, Color.WHITE, DensityUtil.dip2px(this, 4))));
 
             //添加点击事件，也是实现显示selector的效果的一种方式
             textView.setOnClickListener(new View.OnClickListener() {

@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.whj02.Adapter.SsAdapter;
+
+import com.example.whj02.Adapter.TuiJianAdapter;
 import com.example.whj02.Bean.SsBean;
 import com.example.whj02.MainActivity;
 import com.example.whj02.R;
@@ -149,7 +151,17 @@ public class SouSuoHou extends AppCompatActivity  {
 //不等于空的话刷新适配器
             adapter.notifyDataSetChanged();
         }
+        adapter.SetOnItemClickListener(new SsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                 int pid = datas.get(position).getPid();
+    Intent intent=new Intent(SouSuoHou.this,XqActivity.class);
+                intent.putExtra("pid",pid);
+    startActivity(intent);
+            }
+        });
     }
+
 
     private void initView() {
         mDlgssk = (EditText) findViewById(R.id.dlgssk);
@@ -186,5 +198,11 @@ public class SouSuoHou extends AppCompatActivity  {
                 mSsrlv.loadMoreComplete();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
     }
 }

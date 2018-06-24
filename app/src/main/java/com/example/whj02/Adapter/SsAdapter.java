@@ -43,7 +43,7 @@ public class SsAdapter extends RecyclerView.Adapter {
     private Context context;
     private List<SsBean.DataBean> datas;
     int TYPRONE;
-
+    private OnItemClickListener onItemClickListener;
     public SsAdapter(Context context, List<SsBean.DataBean> datas, int TYPRONE) {
         this.context = context;
         this.datas = datas;
@@ -65,14 +65,21 @@ public class SsAdapter extends RecyclerView.Adapter {
      }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         if(holder instanceof LMyViewHolder){
             LMyViewHolder lvh= (LMyViewHolder) holder;
             lvh.ssitemname.setText(datas.get(position).getTitle());
             lvh.ssitemprice.setText(""+datas.get(position).getPrice());
             String[] split = datas.get(position).getImages().split("\\|");
             lvh.ssitemimg.setImageURI(split[0]);
-
+            lvh.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onItemClickListener!=null){
+                        onItemClickListener.onItemClick(position);
+                    }
+                }
+            });
 
         }else if(holder instanceof GMyViewHolder){
             GMyViewHolder gvh= (GMyViewHolder) holder;
@@ -80,7 +87,14 @@ public class SsAdapter extends RecyclerView.Adapter {
             gvh.ssitemprice.setText(""+datas.get(position).getPrice());
             String[] split = datas.get(position).getImages().split("\\|");
             gvh.ssitemimg.setImageURI(split[0]);
-
+            gvh.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onItemClickListener!=null){
+                        onItemClickListener.onItemClick(position);
+                    }
+                }
+            });
 
         }
 
@@ -119,5 +133,12 @@ public class SsAdapter extends RecyclerView.Adapter {
             ssitemprice = itemView.findViewById(R.id.gssitemprice);
             ssitemimg = itemView.findViewById(R.id.gssitemimg);
         }
+    }
+    public   interface OnItemClickListener {
+        void onItemClick(int position);
+
+    }
+    public void SetOnItemClickListener(OnItemClickListener onItemClickListener){
+        this.onItemClickListener=onItemClickListener;
     }
 }

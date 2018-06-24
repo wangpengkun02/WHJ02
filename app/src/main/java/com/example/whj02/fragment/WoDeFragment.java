@@ -18,11 +18,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.whj02.Bean.DlBean;
 import com.example.whj02.Bean.EBMessage;
 import com.example.whj02.R;
 import com.example.whj02.activity.DlActivity;
+import com.example.whj02.baiduditu.BaiDuDITuActivity;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.Gson;
 
@@ -57,7 +59,7 @@ public class WoDeFragment extends Fragment implements View.OnClickListener {
      */
     private ImageView mDingdan;
     private SharedPreferences test;
-
+    private ImageView Mylocation;
     private boolean pd;
     private SharedPreferences.Editor edit;
     private EventBus eventBus;
@@ -109,9 +111,19 @@ public class WoDeFragment extends Fragment implements View.OnClickListener {
         mDizhi.setOnClickListener(this);
         mDingdan = (ImageView) view.findViewById(R.id.dingdan);
         mDingdan.setOnClickListener(this);
+        Mylocation = (ImageView) view.findViewById(R.id.Mylocation);
+   Mylocation.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View v) {
+           Toast.makeText(getContext(),"-----------",Toast.LENGTH_SHORT).show();
+           Intent intent1=new Intent(getContext(), BaiDuDITuActivity.class);
+           startActivity(intent1);
+       }
+   });
         EventBus.getDefault().register(this);
       /*  eventBus = EventBus.getDefault();//得到EventBus实例
         eventBus.register(getContext());//注册EventBus*/
+
     }
     //注解
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -120,6 +132,7 @@ public class WoDeFragment extends Fragment implements View.OnClickListener {
         Log.i("aaaaqa",str);
         dl.setText(str);
     }
+
   /*  //接收传过来的参数         让他运行到主线程中
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void getEventBusData(EBMessage msage) {
@@ -153,8 +166,7 @@ public class WoDeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.dizhi:
                 break;
-            case R.id.dingdan:
-                break;
+
         }
     }
 
